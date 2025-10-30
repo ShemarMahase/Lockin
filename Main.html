@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Eye Detection with MediaPipe</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="timer" class="timer">0:00</div>
+    <div class="container">
+      <h1>Welcome to LockIn!</h1>
+      <button id="startButton">
+        Start Studying!
+      </button>
+      <div id="status" class="status loading">Press the "Start Studying" button to begin your session!</div>
+      
+      <video id="webcamVideo" autoplay playsinline></video>
+      <canvas id="outputCanvas"></canvas>
+      
+      <div class="info">
+        <h3>Detected Eye Data:</h3>
+        <div id="eyeInfo">Waiting for face detection...</div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    
+    <script src="Main.js"></script>
+  </body>
+</html>
